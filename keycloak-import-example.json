@@ -1,0 +1,55 @@
+{
+  "realm" : "mytest",
+  "enabled" : true,
+  "requiredCredentials" : [ "password" ],
+  "roles" : {
+	  "realm" : [
+	      {
+	          "name": "user",
+	          "description": "User privileges"
+	      },
+	      {
+	          "name": "admin",
+	          "description": "Administrator privileges"
+	      }
+	  ]
+  },
+  "users" :
+  [
+    {
+      "username" : "peter",
+      "enabled" : true,
+      "credentials" : [ {
+        "type" : "password",
+        "value" : "abc"
+      } ],
+      "realmRoles" : ["admin"]
+    },
+    {
+      "username" : "john",
+      "enabled" : true,
+      "credentials" : [ {
+        "type" : "password",
+        "value" : "abc"
+      } ],
+      "realmRoles" : ["user"]
+    }
+  ],
+  "clients": [
+      {
+          "clientId": "my-service",
+          "bearerOnly": true
+      },
+      {
+          "clientId": "test",
+	      "bearerOnly": false,
+	      "standardFlowEnabled": false,
+	      "implicitFlowEnabled": false,
+	      "directAccessGrantsEnabled": true,
+          "publicClient": true,
+	      "redirectUris": [
+	        "http://localhost"
+	      ]
+      }      
+  ]  
+}
