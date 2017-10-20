@@ -11,7 +11,7 @@ A Keycloak docker image that allows adding a test realm with preconfigured users
 
 You can pass the JSON import file for your test realm using the environment variable **TEST_IMPORT_JSON**:
 
-    docker run -it -e TEST_IMPORT_JSON="{\"realm\":\"tst\", ... }" <...more parameters...> fuinorg/cloudblue-testready
+    docker run -it -e IMPORT_JSON="{\"realm\":\"tst\", ... }" <...more parameters...> fuinorg/cloudblue-testready
 
 Your 'tst' realm is then imported and ready for use in your tests.
 
