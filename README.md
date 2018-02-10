@@ -19,7 +19,7 @@ For an example of the JSON format see [keycloak-import-example.json](keycloak-im
 
 ## Docker compose file
 
-For your convenience there is also a [Docker compose file](docker-compose.yml) to start a database and Keycloak together manually.  
+For your convenience there is also a [Docker Compose](https://docs.docker.com/compose/) file for [PostgreSQL](docker-compose-postgres.yml) and [MySQL](docker-compose-mysql.yml) to start a database and Keycloak together manually.  
 
 **CAUTION**: You need to create an ".env" file in the same directory where the 'docker-compose-*.yml' files are located.
 
