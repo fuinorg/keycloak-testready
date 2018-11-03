@@ -21,9 +21,9 @@ if [[ ! -z $IMPORT_JSON ]]; then
     IMPORT_JSON_FILE=/opt/jboss/keycloak/bin/import-realm.json
     echo "$IMPORT_JSON" > $IMPORT_JSON_FILE
     chown jboss:jboss $IMPORT_JSON_FILE
-    exec /opt/jboss/docker-entrypoint.sh -Dkeycloak.import=$IMPORT_JSON_FILE $@
+    exec /opt/jboss/tools/docker-entrypoint.sh -Dkeycloak.import=$IMPORT_JSON_FILE $@
 else
 	echo "[KEYCLOAK TESTREADY] No IMPORT_JSON defined"
-    exec /opt/jboss/docker-entrypoint.sh $@
+    exec /opt/jboss/tools/docker-entrypoint.sh $@
 fi
 exit $?
