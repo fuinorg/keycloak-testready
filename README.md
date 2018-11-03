@@ -1,11 +1,11 @@
 # keycloak-testready
-A Keycloak docker image that allows adding a test realm with preconfigured users and clients
+A Keycloak docker image that allows adding a test realm with preconfigured users and clients without mounting a volume.
 
 [![Automated Docker Build](https://img.shields.io/docker/automated/fuinorg/keycloak-testready.svg)](https://hub.docker.com/r/fuinorg/keycloak-testready/)
 
 ## Base Version
 
-- Keycloak 3.3.0.CR2-3
+- Keycloak 4.5.0.Final
 
 ## Usage
 
@@ -49,3 +49,11 @@ or
 	docker-compose -f ./docker-compose-mysql.yml rm   
 
 This removes the stopped service containers.
+
+
+
+## Building the Docker image
+
+```
+docker build -t fuinorg/keycloak-testready .
+```
