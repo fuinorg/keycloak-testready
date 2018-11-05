@@ -20,11 +20,11 @@ services:
       - WAIT_FOR_DB=true
       - WAIT_FOR_SECONDS=30
       - DB_VENDOR=POSTGRES
-      - POSTGRES_PORT_5432_TCP_ADDR=postgres
-      - POSTGRES_PORT_5432_TCP_PORT=5432
-      - POSTGRES_DATABASE=${dbName}
-      - POSTGRES_USER=${dbUser}
-      - POSTGRES_PASSWORD=${dbPassword}
+      - DB_ADDR=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=${dbName}
+      - DB_USER=${dbUser}
+      - DB_PASSWORD=${dbPassword}
       - KEYCLOAK_USER=${keycloakUser}
       - KEYCLOAK_PASSWORD=${keycloakPassword}
       - "IMPORT_JSON={\"realm\":\"tst\",\"enabled\":true,\"requiredCredentials\":[\"password\"],\"roles\":{\"realm\":[{\"name\":\"user\",\"description\":\"User privileges\"},{\"name\":\"admin\",\"description\":\"Administrator privileges\"}]},\"users\":[{\"username\":\"peter\",\"enabled\":true,\"credentials\":[{\"type\":\"password\",\"value\":\"abc\"}],\"realmRoles\":[\"admin\"]},{\"username\":\"john\",\"enabled\":true,\"credentials\":[{\"type\":\"password\",\"value\":\"abc\"}],\"realmRoles\":[\"user\"]}],\"clients\":[{\"clientId\":\"my-service\",\"bearerOnly\":true},{\"clientId\":\"test\",\"bearerOnly\":false,\"standardFlowEnabled\":false,\"implicitFlowEnabled\":false,\"directAccessGrantsEnabled\":true,\"publicClient\":true,\"redirectUris\":[\"http://localhost\"]}]}"

@@ -20,11 +20,11 @@ services:
       - WAIT_FOR_DB=true
       - WAIT_FOR_SECONDS=30
       - DB_VENDOR=MYSQL
-      - MYSQL_PORT_3306_TCP_ADDR=mysql
-      - MYSQL_PORT_3306_TCP_PORT=3306
-      - MYSQL_DATABASE=${dbName}
-      - MYSQL_USER=${dbUser}
-      - MYSQL_PASSWORD=${dbPassword}
+      - DB_ADDR=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=${dbName}
+      - DB_USER=${dbUser}
+      - DB_PASSWORD=${dbPassword}
       - KEYCLOAK_USER=${keycloakUser}
       - KEYCLOAK_PASSWORD=${keycloakPassword}
       - "IMPORT_JSON={\"realm\":\"tst\",\"enabled\":true,\"requiredCredentials\":[\"password\"],\"roles\":{\"realm\":[{\"name\":\"user\",\"description\":\"User privileges\"},{\"name\":\"admin\",\"description\":\"Administrator privileges\"}]},\"users\":[{\"username\":\"peter\",\"enabled\":true,\"credentials\":[{\"type\":\"password\",\"value\":\"abc\"}],\"realmRoles\":[\"admin\"]},{\"username\":\"john\",\"enabled\":true,\"credentials\":[{\"type\":\"password\",\"value\":\"abc\"}],\"realmRoles\":[\"user\"]}],\"clients\":[{\"clientId\":\"my-service\",\"bearerOnly\":true},{\"clientId\":\"test\",\"bearerOnly\":false,\"standardFlowEnabled\":false,\"implicitFlowEnabled\":false,\"directAccessGrantsEnabled\":true,\"publicClient\":true,\"redirectUris\":[\"http://localhost\"]}]}"
