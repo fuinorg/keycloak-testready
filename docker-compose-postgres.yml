@@ -12,7 +12,7 @@ services:
       - POSTGRES_PASSWORD=${dbPassword}
       - POSTGRES_ROOT_PASSWORD=${dbRootPw}
   keycloak:
-    image: fuinorg/keycloak-testready:latest
+    image: fuinorg/keycloak-testready:1.2.0-SNAPSHOT
     container_name: "keycloak-testready-keycloak"
     ports:
       - "8088:8080"

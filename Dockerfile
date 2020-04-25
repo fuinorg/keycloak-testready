@@ -1,4 +1,4 @@
-FROM jboss/keycloak:4.5.0.Final
+FROM jboss/keycloak:9.0.3
 MAINTAINER Michael Schnell
 
 ENV IMPORT_JSON ""

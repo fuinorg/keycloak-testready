@@ -1,11 +1,11 @@
 # keycloak-testready
-A Keycloak docker image that allows adding a test realm with preconfigured users and clients without mounting a volume.
+A Keycloak docker image that allows adding a test realm with preconfigured users and clients without mounting a volume. Currently supports PostgreSQL and MariaDB.
 
 [![Automated Docker Build](https://img.shields.io/docker/automated/fuinorg/keycloak-testready.svg)](https://hub.docker.com/r/fuinorg/keycloak-testready/)
 
 ## Base Version
 
-- Keycloak 4.5.0.Final
+- Keycloak 9.0.3.Final
 
 ## Usage
 
@@ -19,7 +19,7 @@ For an example of the JSON format see [keycloak-import-example.json](keycloak-im
 
 ## Docker compose file
 
-For your convenience there is also a [Docker Compose](https://docs.docker.com/compose/) file for [PostgreSQL](docker-compose-postgres.yml) and [MySQL](docker-compose-mysql.yml) to start a database and Keycloak together manually.  
+For your convenience there is also a [Docker Compose](https://docs.docker.com/compose/) file for [PostgreSQL](docker-compose-postgres.yml) and [MariaDB](docker-compose-mariadb.yml) to start a database and Keycloak together manually.  
 
 **CAUTION**: You need to create an ".env" file in the same directory where the 'docker-compose-*.yml' files are located.
 
@@ -36,7 +36,7 @@ Just run:
    
 or
 
-	docker-compose -f ./docker-compose-mysql.yml up   
+	docker-compose -f ./docker-compose-mariadb.yml up   
    
 Now you can log into your Keycloak server at http://localhost:8088/ using the above defined credentials.
 
@@ -46,7 +46,7 @@ Shutdown with **CTRL C** and then run:
    
 or
 
-	docker-compose -f ./docker-compose-mysql.yml rm   
+	docker-compose -f ./docker-compose-mariadb.yml rm   
 
 This removes the stopped service containers.
 
